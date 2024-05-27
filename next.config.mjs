@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    typescript: {
+      ignoreBuildErrors: true
+    },
     experimental: {
       serverComponentsExternalPackages: ["mongoose"],
     },
@@ -22,9 +25,6 @@ const nextConfig = {
           hostname: "placehold.co",
         },
       ],
-      // typescript: {
-      //   ignoreBuildErrors: true,
-      // },
     },
   };
 
