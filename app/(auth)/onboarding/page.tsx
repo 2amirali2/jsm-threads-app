@@ -6,8 +6,9 @@ const page = async () => {
   const user = await currentUser()
   
   if(!user) return;
-  const userInfo = fetchUser(user?.id)
+  const userInfo = await fetchUser(user?.id)
   // const userInfo = {};
+  // console.log(userInfo)
   const userData = {
     id: user?.id,
     objectId: userInfo?.id,
